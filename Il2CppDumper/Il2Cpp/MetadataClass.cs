@@ -4,108 +4,94 @@ namespace Il2CppDumper
 {
     public class Il2CppGlobalMetadataHeader
     {
-        public uint sanity;
-        public int version;
-        public uint stringLiteralOffset; // string data for managed code
-        public int stringLiteralSize;
-        public uint stringLiteralDataOffset;
-        public int stringLiteralDataSize;
-        public uint stringOffset; // string data for metadata
-        public int stringSize;
-        public uint eventsOffset; // Il2CppEventDefinition
-        public int eventsSize;
-        public uint propertiesOffset; // Il2CppPropertyDefinition
-        public int propertiesSize;
-        public uint methodsOffset; // Il2CppMethodDefinition
-        public int methodsSize;
-        public uint parameterDefaultValuesOffset; // Il2CppParameterDefaultValue
-        public int parameterDefaultValuesSize;
-        public uint fieldDefaultValuesOffset; // Il2CppFieldDefaultValue
-        public int fieldDefaultValuesSize;
-        public uint fieldAndParameterDefaultValueDataOffset; // uint8_t
-        public int fieldAndParameterDefaultValueDataSize;
-        public int fieldMarshaledSizesOffset; // Il2CppFieldMarshaledSize
-        public int fieldMarshaledSizesSize;
-        public uint parametersOffset; // Il2CppParameterDefinition
-        public int parametersSize;
-        public uint fieldsOffset; // Il2CppFieldDefinition
-        public int fieldsSize;
-        public uint genericParametersOffset; // Il2CppGenericParameter
-        public int genericParametersSize;
-        public uint genericParameterConstraintsOffset; // TypeIndex
-        public int genericParameterConstraintsSize;
-        public uint genericContainersOffset; // Il2CppGenericContainer
-        public int genericContainersSize;
-        public uint nestedTypesOffset; // TypeDefinitionIndex
-        public int nestedTypesSize;
-        public uint interfacesOffset; // TypeIndex
-        public int interfacesSize;
-        public uint vtableMethodsOffset; // EncodedMethodIndex
-        public int vtableMethodsSize;
-        public int interfaceOffsetsOffset; // Il2CppInterfaceOffsetPair
-        public int interfaceOffsetsSize;
-        public uint typeDefinitionsOffset; // Il2CppTypeDefinition
-        public int typeDefinitionsSize;
-        [Version(Max = 24.1)]
-        public uint rgctxEntriesOffset; // Il2CppRGCTXDefinition
-        [Version(Max = 24.1)]
-        public int rgctxEntriesCount;
-        public uint imagesOffset; // Il2CppImageDefinition
+        public int parameterDefaultValuesOffset;
+        public int stringsOffset;
+        public int genericContainersOffset;
+        public int field3_0xc;
+        public int field4_0x10;
+        public int field5_0x14;
+        public int field6_0x18;
+        public int field7_0x1c;
+        public int eventsOffset;
+        public int field9_0x24;
+        public int field10_0x28;
+        public int field11_0x2c;
+        public int field12_0x30;
+        public int field13_0x34;
+        public int field14_0x38;
+        public int field15_0x3c;
+        public int field16_0x40;
+        public int field17_0x44;
+        public int field18_0x48;
+        public int methodsOffset;
+        public int field20_0x50;
+        public int attributeDataOffset;
+        public int field22_0x58;
+        public int fieldMetadataSize;
         public int imagesSize;
-        public uint assembliesOffset; // Il2CppAssemblyDefinition
+        public int StringsSize;
+        public int field26_0x68;
+        public int assembliesOffset;
+        public int attributeDataRangeOffset;
+        public int field29_0x74;
+        public int genericParameterConstraintsOffset;
+        public int field31_0x7c;
+        public int typeDefinitionsSize;
+        public int field33_0x84;
+        public int fieldMetadataOffset;
+        public int field35_0x8c;
+        public int field36_0x90;
+        public int fieldDefaultValuesSize;
+        public int field38_0x98;
+        public int parameterDefaultValuesSize;
+        public int field40_0xa0;
+        public int field41_0xa4;
+        public int field42_0xa8;
+        public int field43_0xac;
+        public int field44_0xb0;
+        public int interfaceOffsetsOffset;
+        public int typeDefinitionsOffset;
+        public int field47_0xbc;
+        public int fieldDefaultValuesOffset;
+        public int fieldRefsOffset;
+        public int field50_0xc8;
+        public int stringsLiteralDataSize;
+        public int field52_0xd0;
+        public int field53_0xd4;
+        public int stringLiteralsSize;
+        public int stringLiteralsOffset;
+        public int field56_0xe0;
+        public int field57_0xe4;
+        public int propertiesOffset;
+        public int parametersOffset;
+        public int methodsSize;
+        public int propertiesSize;
+        public int field62_0xf8;
+        public int imagesOffset;
+        public int field64_0x100;
+        public int interfacesOffset;
+        public int nestedTypesOffset;
+        public int stringsLiteralDataSizeOffset;
+        public int field68_0x110;
+        public int genericParametersOffset;
+        public int field70_0x118;
+        public int field71_0x11c;
+        public int field72_0x120;
+        public int field73_0x124;
+        public int field74_0x128;
+        public int field75_0x12c;
+        public int field76_0x130;
+        public int fieldAndParameterDefaultValueDataOffset;
+        public int field78_0x138;
+        public int field79_0x13c;
+        public int field80_0x140;
+        public int field81_0x144;
+        public int field82_0x148;
+        public int field83_0x14c;
+        public int vtableMethodsOffset;
+        public int field85_0x154;
+        public int field86_0x158;
         public int assembliesSize;
-        [Version(Min = 19, Max = 24.5)]
-        public uint metadataUsageListsOffset; // Il2CppMetadataUsageList
-        [Version(Min = 19, Max = 24.5)]
-        public int metadataUsageListsCount;
-        [Version(Min = 19, Max = 24.5)]
-        public uint metadataUsagePairsOffset; // Il2CppMetadataUsagePair
-        [Version(Min = 19, Max = 24.5)]
-        public int metadataUsagePairsCount;
-        [Version(Min = 19)]
-        public uint fieldRefsOffset; // Il2CppFieldRef
-        [Version(Min = 19)]
-        public int fieldRefsSize;
-        [Version(Min = 20)]
-        public int referencedAssembliesOffset; // int32_t
-        [Version(Min = 20)]
-        public int referencedAssembliesSize;
-        [Version(Min = 21, Max = 27.2)]
-        public uint attributesInfoOffset; // Il2CppCustomAttributeTypeRange
-        [Version(Min = 21, Max = 27.2)]
-        public int attributesInfoCount;
-        [Version(Min = 21, Max = 27.2)]
-        public uint attributeTypesOffset; // TypeIndex
-        [Version(Min = 21, Max = 27.2)]
-        public int attributeTypesCount;
-        [Version(Min = 29)]
-        public uint attributeDataOffset;
-        [Version(Min = 29)]
-        public int attributeDataSize;
-        [Version(Min = 29)]
-        public uint attributeDataRangeOffset;
-        [Version(Min = 29)]
-        public int attributeDataRangeSize;
-        [Version(Min = 22)]
-        public int unresolvedVirtualCallParameterTypesOffset; // TypeIndex
-        [Version(Min = 22)]
-        public int unresolvedVirtualCallParameterTypesSize;
-        [Version(Min = 22)]
-        public int unresolvedVirtualCallParameterRangesOffset; // Il2CppRange
-        [Version(Min = 22)]
-        public int unresolvedVirtualCallParameterRangesSize;
-        [Version(Min = 23)]
-        public int windowsRuntimeTypeNamesOffset; // Il2CppWindowsRuntimeTypeNamePair
-        [Version(Min = 23)]
-        public int windowsRuntimeTypeNamesSize;
-        [Version(Min = 27)]
-        public int windowsRuntimeStringsOffset; // const char*
-        [Version(Min = 27)]
-        public int windowsRuntimeStringsSize;
-        [Version(Min = 24)]
-        public int exportedTypeDefinitionsOffset; // TypeDefinitionIndex
-        [Version(Min = 24)]
-        public int exportedTypeDefinitionsSize;
     }
 
     public class Il2CppAssemblyDefinition
